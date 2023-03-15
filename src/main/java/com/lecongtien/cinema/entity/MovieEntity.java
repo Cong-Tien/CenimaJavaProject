@@ -1,6 +1,7 @@
 package com.lecongtien.cinema.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "phim")
 public class MovieEntity {
@@ -21,6 +22,12 @@ public class MovieEntity {
     private String ngayKhoiChieu;
     @Column(name = "ngay_ket_thuc")
     private String ngayKetThuc;
+    @Column(name = "hot")
+    private boolean hot;
+    @Column(name = "dang_chieu")
+    private boolean dangChieu = false;
+    @Column(name = "sap_chieu")
+    private boolean sapChieu = false;
     @Column(name = "san_xuat")
     private String sanXuat;
     @Column(name = "dao_dien")
@@ -29,6 +36,52 @@ public class MovieEntity {
     private int namSX;
     @Column(name = "ap_phich")
     private String poster;
+
+    @OneToMany(mappedBy = "movie")
+    private Set<CastDetailEntity> castDetail;
+
+    @OneToMany(mappedBy = "movie")
+    private Set<GenreDetailEntity> genreDetail;
+
+    public Set<GenreDetailEntity> getGenreDetail() {
+        return genreDetail;
+    }
+
+    public void setGenreDetail(Set<GenreDetailEntity> genreDetail) {
+        this.genreDetail = genreDetail;
+    }
+
+    public Set<CastDetailEntity> getCastDetail() {
+        return castDetail;
+    }
+
+    public void setCastDetail(Set<CastDetailEntity> castDetail) {
+        this.castDetail = castDetail;
+    }
+
+    public boolean getHot() {
+        return hot;
+    }
+
+    public void setHot(boolean hot) {
+        this.hot = hot;
+    }
+
+    public boolean isDangChieu() {
+        return dangChieu;
+    }
+
+    public void setDangChieu(boolean dangChieu) {
+        this.dangChieu = dangChieu;
+    }
+
+    public boolean isSapChieu() {
+        return sapChieu;
+    }
+
+    public void setSapChieu(boolean sapChieu) {
+        this.sapChieu = sapChieu;
+    }
 
     public int getId() {
         return id;

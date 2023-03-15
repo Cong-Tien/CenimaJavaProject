@@ -1,6 +1,8 @@
 package com.lecongtien.cinema.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 
 @Entity(name = "user")
 public class UserEntity {
@@ -8,20 +10,25 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
     @Column(name = "email")
+    @Email(message = "Email ko hop le")
     private String email;
     @Column(name = "password")
-    private String password;
+    private String password="12345678";
+    @NotEmpty(message = "thieu ten")
     @Column(name = "name")
     private String name;
     @Column(name = "ngay_sinh")
     private String ngaySinh;
     @Column(name = "sdt")
     private String sdt;
-    @Column(name = "token")
-    private String token;
+    @Column(name = "access_token")
+    private String accessToken;
+    @Column(name = "refresh_token")
+    private String refreshToken;
     @Column(name = "diem_tich_luy")
-    private int diemTichLuy;
-
+    private int diemTichLuy=0;
+    @Column(name = "loai_tk")
+    private String loaiTk="user";
     @Column(name = "type_token")
     private String typeToken;
     @Column(name = "verify_code")
@@ -29,7 +36,23 @@ public class UserEntity {
     @Column(name = "verify_code_expired")
     private String verifyCodeExpired;
     @Column(name = "is_active")
-    private boolean isActive;
+    private boolean isActive = true;
+
+    public String getLoaiTk() {
+        return loaiTk;
+    }
+
+    public void setLoaiTk(String loaiTk) {
+        this.loaiTk = loaiTk;
+    }
+
+    public String getRefreshToken() {
+        return refreshToken;
+    }
+
+    public void setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
 
     public int getId() {
         return id;
@@ -79,12 +102,12 @@ public class UserEntity {
         this.sdt = sdt;
     }
 
-    public String getToken() {
-        return token;
+    public String getAccessToken() {
+        return accessToken;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 
     public int getDiemTichLuy() {

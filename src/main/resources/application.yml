@@ -11,7 +11,21 @@ spring:
     properties:
       hibernate:
         dialect: "org.hibernate.dialect.MySQL8Dialect"
+  social:
+    facebook:
+      appId: 662685252140725
+      appSecret: eaea5565e9322d8a76850f337b84b1dc
 server:
   servlet:
     context-path: /lecongtien/api
+
+#@ConditionalOnProperty: Tự map key bên application thành đối tượng
+#@Value(${tenKey}): lấy giá trị key bên application thành biến
+file:
+  upload-dir: C:\Users\My PC\Desktop\Java\cinema\cinema\src\main\java\com\lecongtien\cinema\image
+
+redis:
+  host: localhost
+  port: 6379
+
 
