@@ -1,16 +1,14 @@
 package com.lecongtien.cinema.controller;
 
-import com.lecongtien.cinema.DTO.RoomDTO;
+import com.lecongtien.cinema.model.DTO.RoomDTO;
 import com.lecongtien.cinema.payload.response.DataResponse;
 import com.lecongtien.cinema.repository.RoomRepository;
 import com.lecongtien.cinema.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

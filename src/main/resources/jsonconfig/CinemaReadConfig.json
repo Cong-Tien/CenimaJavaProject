@@ -1,0 +1,79 @@
+{
+  "mappingRule": {
+    "nameCinema": "Cinema name",
+    "logoCinema": "Logo cinema",
+    "infor": "Infor",
+    "mapLink": "Link Google Map",
+    "ngayMoCua": "Opening hours",
+    "gioMoCua": "Opening Day",
+    "heThongRap": "System Cinema"
+  },
+  "style": {
+    "sheetName": "Sheet1",
+    "body": {
+      "font": "Arial",
+      "backGroundColor": [95,155,213],
+      "isBold": true,
+      "isItalic": false,
+      "fontWeight": 11,
+      "fontColor": 9
+    },
+    "header": {
+      "font": "Calibri",
+      "backGroundColor": [95,155,213],
+      "isBold": false,
+      "isItalic": false,
+      "fontWeight": 11,
+      "fontColor": 1
+    }
+  },
+  "fileName": "Report Cinema",
+  "headers": [
+    "Cinema name",
+    "Logo cinema",
+    "Infor",
+    "Link Google Map",
+    "Opening hours",
+    "Opening Day",
+    "System Cinema"
+  ],
+  "configKey": [
+    {
+      "key": "Cinema name",
+      "type": "String",
+      "isRequired": true
+    },
+    {
+      "key": "Logo cinema",
+      "type": "String",
+      "isRequired": true
+    },
+    {
+      "key": "Infor",
+      "type": "String",
+      "isRequired": true
+    },
+    {
+      "key": "Link Google Map",
+      "type": "String",
+      "isRequired": true
+    },
+    {
+      "key": "Opening hours",
+      "type": "Date",
+      "isRequired": true
+    },
+    {
+      "key": "Opening Day",
+      "type": "Date",
+      "isRequired": true
+    },
+    {
+      "key": "System Cinema",
+      "type": "String",
+      "isRequired": true
+    }
+  ],
+  "startRow": 0,
+  "startColumn": 0
+}

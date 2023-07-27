@@ -1,4 +1,4 @@
-package com.lecongtien.cinema.DTO;
+package com.lecongtien.cinema.model.DTO;
 
 public class RoomDTO {
     private String roomName;

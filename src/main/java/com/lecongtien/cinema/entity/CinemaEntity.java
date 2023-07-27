@@ -1,8 +1,12 @@
 package com.lecongtien.cinema.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name = "cum_rap")
+@Data
 public class CinemaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,64 +19,11 @@ public class CinemaEntity {
     private String infor;
     @Column(name = "map_link")
     private String mapLink;
+    @Column(name = "ngay_mo_cua")
+    private Date ngayMoCua;
     @Column(name = "gio_mo_cua")
-    private String gioMoCua;
+    private Date gioMoCua;
     @Column(name = "ma_htr")
     private int maHtr;
 
-    public int getIdCinema() {
-        return idCinema;
-    }
-
-    public void setIdCinema(int idCinema) {
-        this.idCinema = idCinema;
-    }
-
-    public String getNameCinema() {
-        return nameCinema;
-    }
-
-    public void setNameCinema(String nameCinema) {
-        this.nameCinema = nameCinema;
-    }
-
-    public String getLogoCinema() {
-        return logoCinema;
-    }
-
-    public void setLogoCinema(String logoCinema) {
-        this.logoCinema = logoCinema;
-    }
-
-    public String getInfor() {
-        return infor;
-    }
-
-    public void setInfor(String infor) {
-        this.infor = infor;
-    }
-
-    public String getMapLink() {
-        return mapLink;
-    }
-
-    public void setMapLink(String mapLink) {
-        this.mapLink = mapLink;
-    }
-
-    public String getGioMoCua() {
-        return gioMoCua;
-    }
-
-    public void setGioMoCua(String gioMoCua) {
-        this.gioMoCua = gioMoCua;
-    }
-
-    public int getMaHtr() {
-        return maHtr;
-    }
-
-    public void setMaHtr(int maHtr) {
-        this.maHtr = maHtr;
-    }
 }

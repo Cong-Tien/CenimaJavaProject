@@ -67,6 +67,7 @@ public class SecurityConfig {
                 .antMatchers("/signin/test").authenticated()
                 .antMatchers("/refresh-token").permitAll()
                 .antMatchers("/file/**").permitAll()
+                .antMatchers("/import/**").permitAll()
                 .antMatchers("/user/**").hasRole("USER")
                 .antMatchers("/tiendzsocket/**").permitAll()
                 .anyRequest().authenticated();

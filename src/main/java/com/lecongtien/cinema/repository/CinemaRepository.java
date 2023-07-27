@@ -11,4 +11,5 @@ import java.util.List;
 public interface CinemaRepository extends JpaRepository<CinemaEntity,Integer> {
     List<CinemaEntity> findByMaHtr(int maHtr);
     CinemaEntity findByIdCinema(int id);
+    CinemaEntity findByNameCinema(String name);
 }

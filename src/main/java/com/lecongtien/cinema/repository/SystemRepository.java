@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SystemRepository extends JpaRepository<SystemEntity,Integer> {
+    SystemEntity findByTenHtr(String name);
 }

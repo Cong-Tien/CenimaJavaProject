@@ -1,7 +1,6 @@
 package com.lecongtien.cinema.service;
 
-import com.lecongtien.cinema.DTO.RoomDTO;
-import org.springframework.stereotype.Service;
+import com.lecongtien.cinema.model.DTO.RoomDTO;
 
 import java.util.List;
 

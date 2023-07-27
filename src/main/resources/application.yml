@@ -15,6 +15,8 @@ spring:
     facebook:
       appId: 662685252140725
       appSecret: eaea5565e9322d8a76850f337b84b1dc
+  profiles:
+    active: all
 server:
   servlet:
     context-path: /lecongtien/api

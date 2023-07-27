@@ -3,20 +3,17 @@ package com.lecongtien.cinema.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.lecongtien.cinema.DTO.RoomDTO;
-import com.lecongtien.cinema.controller.model.Infor;
+import com.lecongtien.cinema.model.DTO.RoomDTO;
 import com.lecongtien.cinema.entity.RoomEntity;
 import com.lecongtien.cinema.entity.ShowTimeEntity;
 import com.lecongtien.cinema.repository.RoomRepository;
 import com.lecongtien.cinema.repository.ShowtimeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 @Service
 public class RoomServiceImp implements RoomService{

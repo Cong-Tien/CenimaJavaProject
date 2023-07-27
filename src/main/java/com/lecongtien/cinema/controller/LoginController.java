@@ -82,8 +82,8 @@ public class LoginController {
 //        dataTokenResponse.setRefreshToken(refreshToken);
         DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss");
 
-        String dateInString = "12/25/2013 10:11:59";
-        DateTime dateTime = DateTime.parse(dateInString, formatter);
+//        String dateInString = "12/25/2013 10:11:59";
+//        DateTime dateTime = DateTime.parse(dateInString, formatter);
 
 
         DataResponse dataResponse= new DataResponse();
